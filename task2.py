@@ -14,3 +14,5 @@
 #
 # семь
 # восемьдесят пять
+
+def number_to_words(num):
