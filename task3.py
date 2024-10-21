@@ -5,19 +5,36 @@
 # Пример:
 # 2013
 # MMXIII
-num=input()
-l=len(num)
-lst={'I' : 1, 'V' : 5, 'X' : 10, 'L' : 50, 'C' : 100, 'D': 500, 'M': 1000}
-summ=lst[num[-1]]
-for i in range(-1, -1*l, -1):
-    x, y=lst[num[i]], lst[num[i-1]]
-    if x<=y:
-        summ+=y
+num=int(input())
+
+def Rome(n):
+    if n==0:
+        return ''
+    elif n>=1000:
+        n-=1000
+        return 'M'+Rome(n)
+    elif n>=500:
+        n-=500
+        return 'D'+Rome(n)
+    elif n>=100:
+
+        n-=100
+        return 'C'+Rome(n)
+    elif n>=50:
+
+        n-=50
+        return 'L'+Rome(n)
+    elif n>=10:
+
+        n-=10
+        return 'X'+Rome(n)
+    elif n>=5:
+
+        n-=5
+        return 'V'+Rome(n)
     else:
-        summ -= y
-print(summ)
 
+        n -= 1
+        return 'I'+Rome(n)
 
-
-
-
+print(Rome(num))
