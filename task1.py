@@ -11,7 +11,10 @@
 # *********
 # **********
 n=int(input())
-lst=''
-for i in range(n):
-    lst+='*'
-    print(lst)
+def f(n):
+    lst=''
+    for i in range(n):
+        lst+='*'
+        print(lst)
+    return
+f(n)
