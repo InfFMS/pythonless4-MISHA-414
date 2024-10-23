@@ -4,6 +4,11 @@
 # Пользоваться input()[::-1] запрещено!
 # Идея задачи реализовать алгоритм,
 # который будет работать для любого введенного натурального числа.
-def down_up(num, ind):
-    if ind==len(num)-1:
-        return
+def invariant(n):
+    answer = ''
+    for i in range(len(str(n))):
+        num = str(n)[(-i-1)]
+        answer = answer + num
+    return answer
+number=int(input())    
+print(invariant(number))
