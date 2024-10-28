@@ -3,4 +3,11 @@
 # или слово NO в противном случае.
 # Операцией возведения в степень пользоваться нельзя!
 # Задача на рекурсию!
-
+def odd(n):
+    if n==1:
+        return 'YES'
+    elif n%2==0:
+        return odd(n//2)
+    else:
+        return 'NO'
+print(odd(int(input())))
