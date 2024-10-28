@@ -10,9 +10,10 @@
 # 5 3
 
 a, b=map(int, input().split())
-
-maxim=1
-for num in range(1, max(a, b)+1):
-    if a%num==0 and b%num==0:
-       maxim=num
-print(a//maxim, b//maxim)
+def razional(a, b):
+    maxim=1
+    for num in range(1, max(a, b)+1):
+        if a%num==0 and b%num==0:
+           maxim=num
+    return a//maxim, b//maxim
+print(razional(a, b))
