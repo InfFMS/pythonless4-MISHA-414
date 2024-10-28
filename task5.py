@@ -4,6 +4,9 @@
 # Пользоваться input()[::-1] запрещено!
 # Идея задачи реализовать алгоритм,
 # который будет работать для любого введенного натурального числа.
-def down_up(num, ind):
-    if ind==len(num)-1:
-        return
+def down_up(num):
+    if num<10:
+        return str(num)
+    else:
+        return str(num%10)+down_up(num//10)
+print(down_up(int(input())))

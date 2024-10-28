@@ -10,7 +10,7 @@
 # перевод из десятичной системы счисления в любую
 # перевод из любой системы счисления в десятичную
 # Объедините эти две подзадачи, получите ответ.
-num, from_base, to_base=map(int, input().split())
+list=list(map(int, input().split()))
 dies=int(num, from_base)
 print(convert_to(dies,  to_base))
 
